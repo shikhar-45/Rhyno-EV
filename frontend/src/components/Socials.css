@@ -1,0 +1,10 @@
+.social{
+    padding: 0.5rem 0.9rem;
+    font-size: 1.6rem;
+}
+
+.social-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

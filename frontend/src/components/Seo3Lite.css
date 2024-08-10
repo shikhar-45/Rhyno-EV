@@ -1,0 +1,71 @@
+.table-with-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.tableContainer {
+    text-align: center;
+    padding:0 0.3rem;
+    margin-bottom: 1rem;
+}
+
+.tableContainer:hover{
+    box-shadow: 0 0.2rem 0.3rem #6c6b6b;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    color: #131313;
+    font-size: 1.25rem;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.list li {
+    padding: 0.2rem 0;
+}
+
+.row div {
+    flex: 1;
+    padding : 0.5rem 0.2rem;
+    text-align: center;
+}
+
+#header{
+    font-weight: bold;
+}
+
+@media screen and (max-width : 970px)
+{
+    .tableContainer{
+        width : 100%;
+        padding : 0;
+    }
+}
+@media screen and (max-width:650px)
+{
+    .table{
+        margin : 2rem 0.5rem;
+    }
+
+    .row{
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width : 490px)
+{
+    .row div{
+        padding : 1rem 0;
+    }
+}

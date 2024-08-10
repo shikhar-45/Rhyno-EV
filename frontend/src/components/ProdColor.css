@@ -1,0 +1,72 @@
+.card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.dots-container{             /*contains dot containers*/
+    display: flex;
+    flex-direction: column;
+}
+
+.single-dot-container{     /*contains a dot and a color name*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding : 0.5rem;
+}
+
+
+.dot{               /*individual dot*/
+    width:2rem;
+    height: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0.3rem;
+}
+
+.dot.active{
+    border-bottom : 1px solid #4e4d4d;
+    box-shadow: 0.2rem 0.2rem 0.2rem #4e4d4d;
+}
+
+.color-name{                    /*name of color*/
+    text-transform: capitalize;
+    font-family: "Poppins", sans-serif;
+    font-size : 1.2rem;
+    font-weight : bold;
+    margin : 0.3rem;
+}
+
+
+.color-image{                  /*image*/
+    width : 30rem;
+    height : auto;
+}
+
+@media screen and (max-width:970px)
+{
+    .color-image{
+        width : 20rem;
+    }
+
+    .dot{
+        width : 1.5rem;
+        height : 1.5rem;
+    }
+
+    .single-dot-container{
+        flex-direction: column;
+        padding : 1rem 0.5rem;
+    }
+
+    .dots-container{
+        flex-direction: row;
+    }
+
+    .card{
+        flex-direction: column;
+    }
+}

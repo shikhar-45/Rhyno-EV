@@ -1,0 +1,90 @@
+.frontline {
+    margin: 2.5rem 1rem;
+    text-align: left;
+    overflow-x: hidden;
+}
+
+.changingText {
+    margin-right: 0rem;
+}
+
+.vehicles {
+    height: auto;
+    width: 70%;
+    display: block;
+    margin: 3rem auto;
+    padding: 0.5rem 1rem;
+    max-width: 100%;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.prod {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 0.1rem solid #cec4c4;
+    border-radius: 0.5rem;
+    padding: 1.6rem 0.5rem;
+    margin: 1rem 0.5rem;
+}
+
+.prod:hover{
+    box-shadow: 0 0.35rem 0.3rem #cec4c4;
+}
+
+.prod h1 {
+    font-size: 1.8rem;
+}
+
+.vehicle-type {
+    height: auto;
+    width: 90%;
+    margin: 1.5rem 0.5rem;
+    max-width: 100%;
+}
+
+#seo3 {
+    margin-bottom: 6.1rem;
+}
+
+#preBook {
+    width: 5.5rem;
+    background-color: #131313;
+    border: none;
+    color: #FFFFFF;
+    border-radius: 1.3rem;
+    font-family: "Poppins", sans-serif;
+    padding: 0.5rem 0.3rem;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    box-shadow: 0 0.35rem 0.5rem #4e4d4d;
+    z-index : 1;
+}
+
+#preBook:hover {
+    color: #F9ED32;
+}
+
+@media screen and (max-width : 1100px) {
+    .vehicles {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width : 900px) {
+    .image-container {
+        flex-direction: column;
+    }
+
+    .vehicle-type {
+        width: 40%;
+    }
+}

@@ -1,0 +1,14 @@
+.new-social{
+    padding: 0.5rem 0.9rem;
+    font-size: 2rem;
+}
+
+.new-container{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.new-container a{
+    color: #131313;
+}
