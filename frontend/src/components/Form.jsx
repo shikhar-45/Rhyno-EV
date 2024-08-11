@@ -26,7 +26,6 @@ const Form = () => {
         e.preventDefault()
         try {
             const response = await axios.post(`${apiURL}/api/payment`, formData)
-            console.log(response.data)
             alert('Booking successful')
             setFormData({
                 name:'',
@@ -79,7 +78,7 @@ const Form = () => {
                                 <input type='text' name='cvv' value={formData.cvv} onChange={handleChange} required />
                             </div>
                         </div>
-                        <button className="btn" type="submit" onSubmit={handleSubmit} id="pre-book-button">Submit</button>
+                        <button className="btn" type="submit" id="pre-book-button">Submit</button>
                     </form>
                 </div>
             </Element>
