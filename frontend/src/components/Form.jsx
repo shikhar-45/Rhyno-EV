@@ -13,16 +13,30 @@ const Form = () => {
         expiryDate: '',
         cvv: ''
     })
-
+    
     const handleChange = (e) => {
+        console.log(formData);
         setFormData({ ...formData, [e.target.name]: e.target.value })
     }
 
     const handleSubmit = async (e) => {
+        
+        console.log(e);
+        
         e.preventDefault()
         try {
-            const response = await axios.post('#', formData)
+            const response = await axios.post('http://localhost:5000/api/payment', formData)
+            console.log(response.data)
             alert('Booking successful')
+            setFormData({
+                name:'',
+                email:'',
+                phone:'',
+                model:'',
+                cardNumber:'',
+                expiryDate:'',
+                cvv:''
+            })
         } catch (error) {
             console.error('Error booking', error)
             alert('Booking failed')
@@ -65,7 +79,7 @@ const Form = () => {
                                 <input type='text' name='cvv' value={formData.cvv} onChange={handleChange} required />
                             </div>
                         </div>
-                        <div className="btn" type="submit" id="pre-book-button">Submit</div>
+                        <button className="btn" type="submit" onSubmit={handleSubmit} id="pre-book-button">Submit</button>
                     </form>
                 </div>
             </Element>

@@ -4,6 +4,7 @@ import "./Home.css"
 import { group, black_side, blue_side, red_side } from '../assets'
 import SlidingCarousel from './SlidingCarousel'
 import { Element } from 'react-scroll'
+import {Link} from 'react-scroll'
 
 const Home = () => {
   const texts = ["Elegance", "Minimalism", "Comfort"];
@@ -35,22 +36,22 @@ const Home = () => {
         <div className='prod'>
           <img src={blue_side} alt="SEO3 Lite" className='vehicle-type' />
           <h1>SEO3 Lite</h1>
-          <button className='btn'>Check Out</button>
+          <button className='btn'><Link to="seo3lite" smooth={true} duration={1000}>Check Out</Link></button>
         </div>
 
         <div className='prod'>
           <img src={black_side} alt="SEO3" className='vehicle-type' id='seo3' />
           <h1>SEO3</h1>
-          <button className='btn'>Check Out</button>
+          <button className='btn'><Link to="seo3" smooth={true} duration={1000}>Check Out</Link></button>
         </div>
 
         <div className='prod'>
           <img src={red_side} alt="SEO3 Max" className='vehicle-type' />
           <h1>SEO3 Max</h1>
-          <button className='btn'>Check Out</button>
+          <button className='btn'><Link to="seo3max" smooth={true} duration={1000}>Check Out</Link></button>
         </div>
       </div>
-      <button id='preBook'>Pre-Book Now</button>
+      <button id='preBook'><Link to="preBookForm" smooth={true} duration={1200}>Pre-Book Now</Link></button>
 
       <SlidingCarousel/>
       </Element>

@@ -1,5 +1,6 @@
 //setting up server, connecting to mongoDB and using routes defined in paymentRoutes.js
 
+require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
@@ -14,14 +15,12 @@ app.use(cors())
 app.use(bodyParser.json())
 
 //MongoDB connection
-mongoose.connect('#',{
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-}).then(() => {
-    console.log('Connected to MongoDB')
-}).catch(err => {
-    console.error('MongoDB connection error', err)
-})
+mongoose.connect(process.env.MONGODB_URI)
+    .then(() => {
+        console.log('Connected to MongoDB')
+    }).catch(err => {
+        console.error('MongoDB connection error', err)
+    })
 
 //API routes
 app.use('/api/payment', paymentRoutes)

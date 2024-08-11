@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Seo3Lite.css"
 import { Element } from 'react-scroll'
+import {Link} from 'react-scroll'
 
 const Seo3Lite = () => {
     return (
@@ -84,7 +85,7 @@ const Seo3Lite = () => {
                 </div>
 
             </div>
-            <div className="btn">Buy now</div>
+            <button className="btn"><Link to="preBookForm" smooth={true} duration={1000}>Buy now</Link></button>
         </div>
         </Element>
     )

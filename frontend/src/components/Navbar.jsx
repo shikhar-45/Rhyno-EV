@@ -12,7 +12,7 @@ const Navbar = () => {
     };
 
     return (
-        <div>
+        <div className='navbar'>
             <nav>
                 <img src={rhyno_logo} alt="logo"></img>
                 <ul className="container">
@@ -29,7 +29,7 @@ const Navbar = () => {
                             </ul>
                         )}
                     </li>
-                    <li><Link to="prebook" smooth={true} duration={500}>Pre-book now</Link></li>
+                    <li><Link to="preBookForm" smooth={true} duration={1000}>Pre-book now</Link></li>
                 </ul>
                 <Socials/>
             </nav>

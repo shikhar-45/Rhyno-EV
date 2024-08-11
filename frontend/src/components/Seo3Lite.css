@@ -11,7 +11,7 @@
     margin-bottom: 1rem;
 }
 
-.tableContainer:hover{
+.table-with-button:hover{
     box-shadow: 0 0.2rem 0.3rem #6c6b6b;
 }
 
