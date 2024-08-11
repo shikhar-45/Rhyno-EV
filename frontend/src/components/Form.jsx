@@ -20,9 +20,6 @@ const Form = () => {
     }
 
     const handleSubmit = async (e) => {
-        
-        console.log(e);
-        
         e.preventDefault()
         try {
             const response = await axios.post(`${apiURL}/api/payment`, formData)
