@@ -13,7 +13,7 @@ const Form = () => {
         expiryDate: '',
         cvv: ''
     })
-    
+    const apiURL = import.meta.env.VITE_API_ENDPOINT;
     const handleChange = (e) => {
         console.log(formData);
         setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -25,7 +25,7 @@ const Form = () => {
         
         e.preventDefault()
         try {
-            const response = await axios.post('http://localhost:5000/api/payment', formData)
+            const response = await axios.post(`${apiURL}/api/payment`, formData)
             console.log(response.data)
             alert('Booking successful')
             setFormData({
